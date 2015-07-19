@@ -174,6 +174,7 @@ function Z1_Uni(input)
 
    }
    );
+   output = output.replace(/([^\u1040-\u1049\u1031])\u1040([\u102b-\u1030\u1036\u1037\u1038\u103a]|[\u1000-\u1021]\u103a)/g, "$1\u101d$2");
    // zero and wa
    
    
