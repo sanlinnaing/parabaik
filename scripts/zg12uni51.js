@@ -200,6 +200,23 @@ function Z1_Uni(input)
    // reordering storage order 
    output = output.replace(ans+u, u+ans);
    
+  // user typo mistakes on Zawgyi fixes
+  output = output.replace(/\u1038\u103a/g, "\u103a\u1038");
+	output = output.replace(/\u102d\u103a|\u103a\u102d/g, "\u102d");
+	output = output.replace(/\u002e\u002e\u002e\u103a/g, "\u103a");
+	output = output.replace(/\u102d\u102f\u103a/g, "\u102d\u102f");
+	output = output.replace(/\u0020\u1037/g, '\u1037');
+	output = output.replace(/\u1037\u1036/g, '\u1036\u1037');
+	output = output.replace(/\u102d\u102d/g, '\u102d');
+	output = output.replace(/\u102e\u102e/g, '\u102e');
+	output = output.replace(/\u102d\u102e|\u102e\u102d/g, '\u102e');
+	output = output.replace(/\u102f\u102f/g, '\u102f');
+	output = output.replace(/\u102f\u102d/g, '\u102d\u102f');
+	output = output.replace(/\u1037\u1037/g, '\u1037');
+	output = output.replace(/\u1032\u1032/g, '\u1032');
+	output = output.replace(/\u1044\u1004\u103A\u1038/g, "\u104E\u1004\u103A\u1038");
+	// user typo mistakes fixes end
+   
     output =  output.replace( /(\u103A)(\u1037)/g, "$2$1");
    // For Latest Myanmar3
 
