@@ -181,7 +181,7 @@ function Z1_Uni(input)
  
 
 
-   output = output.replace(/(([\u1000-\u101C\u101E-\u102A\u102C\u102E-\u103F\u104C-\u109F\u0020]))(\u1047)/g, function($0, $1)
+   output = output.replace(/(([\u1000-\u101C\u101E-\u102A\u102C\u102E-\u103F\u104C-\u109F]))(\u1047)/g, function($0, $1)
    {
       return $1 ? $1 + '\u101B' : $0 + $1;
 
@@ -189,7 +189,7 @@ function Z1_Uni(input)
    );
    // seven and ra
 
-   output =  output.replace( /(\u1047)( ? = [\u1000 - \u101C\u101E - \u102A\u102C\u102E - \u103F\u104C - \u109F\u0020])/g, "\u101B");
+   output =  output.replace( /(\u1047)( ? = [\u1000 - \u101C\u101E - \u102A\u102C\u102E - \u103F\u104C - \u109F])/g, "\u101B");
    // seven and ra
    
 
